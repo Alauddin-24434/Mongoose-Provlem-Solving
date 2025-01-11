@@ -94,3 +94,34 @@ const cars=[
 
 
   console.log(sortCarsByYear(cars));
+
+//   Task 5: Find and Modify
+
+
+const peoples = [
+    { name: "Rafiq", age: 25 },
+    { name: "Jamil", age: 30 },
+    { name: "Karim", age: 35 },
+  ];
+  
+  
+  function updatePersonAge(array, name, newAge) {
+    // Loop through the array to find the person
+    const person = array.find((p) => p.name === name);
+  
+    if (person) {
+      // Update the age if the person is found
+      person.age = newAge;
+      console.log(`${name}'s age has been updated.`);
+    } else {
+      console.log(`${name} was not found.`);
+    }
+  
+    // Print the updated array
+    console.log(array);
+  }
+  
+  // Step 3: Call the function
+  updatePersonAge(peoples, "Jamil", 32); 
+  updatePersonAge(peoples, "Eve", 28); 
+  
